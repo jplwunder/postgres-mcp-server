@@ -79,7 +79,7 @@ ALTER DEFAULT PRIVILEGES IN SCHEMA public
 ### Running the Server
 
 ```bash
-python main.py
+uv run python main.py
 ```
 
 The server communicates via stdio and can be integrated with MCP clients like Claude Desktop.
@@ -413,23 +413,23 @@ pytest
 
 ```
 postgres-mcp/
-   .env                    # Configuration (not in git)
-   .env.example            # Configuration template
-   .gitignore
-   README.md
-   pyproject.toml
-   main.py                 # Entry point
-   src/
-       postgres_mcp/
-           __init__.py
-           config.py       # Configuration
-           database.py     # Connection pool
-           formatters.py   # Output formatting
-           history.py      # Query history
-           server.py       # MCP server
-           tools.py        # MCP tools
-           types.py        # Pydantic models
-           validators.py   # Query validation
+--- .env                    # Configuration (not in git)
+--- .env.example            # Configuration template
+--- .gitignore
+--- README.md
+--- pyproject.toml
+--- main.py                 # Entry point
+--- src/
+    --- postgres_mcp/
+        --- __init__.py
+        --- config.py       # Configuration
+        --- database.py     # Connection pool
+        --- formatters.py   # Output formatting
+        --- history.py      # Query history
+        --- server.py       # MCP server
+        --- tools.py        # MCP tools
+        --- types.py        # Pydantic models
+        --- validators.py   # Query validation
 ```
 
 ## License

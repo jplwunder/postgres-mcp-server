@@ -30,7 +30,7 @@ def get_config() -> DatabaseConfig:
     password = os.getenv("POSTGRES_PASSWORD")
 
     # Validate required parameters
-    if not all([host, database, user, password]):
+    if not all([host, database, user]):
         missing = []
         if not host:
             missing.append("POSTGRES_HOST")
@@ -38,8 +38,6 @@ def get_config() -> DatabaseConfig:
             missing.append("POSTGRES_DATABASE")
         if not user:
             missing.append("POSTGRES_USER")
-        if not password:
-            missing.append("POSTGRES_PASSWORD")
 
         raise ValueError(
             f"Missing required environment variables: {', '.join(missing)}. "
