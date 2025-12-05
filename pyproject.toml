@@ -1,0 +1,13 @@
+[project]
+name = "postgres-file"
+version = "0.1.0"
+description = "PostgreSQL MCP server for executing SELECT queries with read-only safety"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "asyncpg>=0.29.0",
+    "loguru>=0.7.3",
+    "mcp>=1.23.1",
+    "pydantic>=2.0",
+    "python-dotenv>=1.0",
+]
