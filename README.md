@@ -116,10 +116,14 @@ Alternatively, if using `uv`:
   "mcpServers": {
     "postgres": {
       "command": "uv",
-      "args": ["run", "python", "main.py"],
-      "cwd": "/path/to/postgres-mcp"
+      "args": [
+        "run",
+        "--directory",
+        "/path-to-postgres-mcp/postgres-mcp",
+        "python",
+        "main.py"
+      ]
     }
-  }
 }
 ```
 
